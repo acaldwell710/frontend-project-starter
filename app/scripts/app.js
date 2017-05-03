@@ -6,15 +6,15 @@
             requireBase: false
          });
          
-              $stateProvider
-         .state('landing', {
-             url: '/',
-             templateUrl: '/templates/landing.html'
-         });
+        $stateProvider
+            .state('landing', {
+            url: '/',
+            templateUrl: '/templates/landing.html'
+        });
      }
  
 
 angular
-    .module('BlocBaseProject', ['ui.router', 'firebase']);
+    .module('blocBaseProject', ['ui.router', 'firebase']);
     .config(config);
  })();
