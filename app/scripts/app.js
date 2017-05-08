@@ -9,12 +9,13 @@
         $stateProvider
             .state('landing', {
             url: '/',
+            controller: 'LandingCtrl as landing',
             templateUrl: '/templates/landing.html'
         });
      }
  
 
 angular
-    .module('blocBaseProject', ['ui.router', 'firebase']);
+    .module('blocBaseProject', ['ui.router', 'firebase'])
     .config(config);
  })();
