@@ -1,7 +1,8 @@
 
  (function() {
      function LandingCtrl(Room) {
-         this.rooms = Room;
+         this.rooms = Room.all;
+         this.rooms.add = Room.add;
      }
  
      angular
