@@ -13,6 +13,15 @@
 
     return Room;
   }
+    
+    
+  //  ---- testing --- //
+    
+    // mouse over active link
+    // on click enter the chat room
+    // once entered show the room & message area
+    // list other rooms on side / create room area
+    
 
   angular
     .module('blocBaseProject')

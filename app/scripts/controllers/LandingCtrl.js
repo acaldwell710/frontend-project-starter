@@ -3,6 +3,10 @@
      function LandingCtrl(Room) {
          this.rooms = Room.all;
          this.createRoom = Room.add;
+         
+         this.selectRoom = function (room) {
+             $location.path(room.link)
+         }
      }
  
      angular
