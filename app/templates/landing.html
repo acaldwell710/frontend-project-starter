@@ -2,8 +2,8 @@
 
 <!-- ng-model, ng-submit -->
 <!-- connect form to room service through controller -->
-<form ng-submit='Room.add' ng-controller='LandingCtrl'>
-  <input type='text' name='string' placeholder='Room Name' ng-model='string'>
+<form ng-submit='landing.room.add(name)'>
+  <input type='text' name='name' placeholder='Room Name' ng-model='name'>
   <input type='submit' value='Create Room'>
 </form>
 
