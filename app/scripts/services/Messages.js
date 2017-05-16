@@ -13,6 +13,6 @@
   }
 
   angular
-    .module('blocChat')
+    .module('blocBaseProject')
     .factory('Message', ['$firebaseArray', Message]);
 })();

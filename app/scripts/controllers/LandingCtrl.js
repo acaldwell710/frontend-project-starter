@@ -5,7 +5,8 @@
          this.createRoom = Room.add;
          
          this.selectRoom = function (room) {
-             $location.path(room.link)
+             $location.path(room.link);
+             
          }
      }
  
