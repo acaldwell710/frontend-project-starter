@@ -14,4 +14,4 @@
 </div>
 
 <h1>{{ landing.currentRoom.name }}</h1>
-<div><p>{{ landing.messages.content }}</p></div>
+<div class="messages" ng-repeat="message in landing.messages"><p>{{ landing.messages.content }}</p></div>
