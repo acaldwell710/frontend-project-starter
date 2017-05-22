@@ -13,5 +13,6 @@
     </div>
 </div>
 
-<h1>{{ landing.currentRoom.name }}</h1>
-<div class="messages" ng-repeat="message in landing.messages"><p>{{ landing.messages.content }}</p></div>
+<div class="room"><h1>{{ landing.currentRoom.name }}</h1></div>
+<div class="messages" ng-repeat="message in landing.messages">
+    <p>{{ message.content }}</p></div>
