@@ -10,10 +10,7 @@
         //Use the firebase method $add here
         users.$add({ name: userName });
     } 
-    
-    User.getByRoomId = function(userName, users) {
-        var newRef = ref.orderByChild("users").equalTo(userName);
-        return $firebaseArray(newRef);
+   
     };
 
     return Room;
