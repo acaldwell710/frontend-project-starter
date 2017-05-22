@@ -9,9 +9,7 @@
          
          
          this.selectRoom = function(room) {
-             console.log(room);
              this.currentRoom = room;
-             
              this.messages = Message.getByRoomId(room.$id);
           
          }
@@ -19,5 +17,5 @@
  
      angular
          .module('blocBaseProject')
-         .controller('LandingCtrl', ['Room', 'Message', LandingCtrl]);
+         .controller('LandingCtrl', ['Room', 'Message', 'User', LandingCtrl]);
  })();

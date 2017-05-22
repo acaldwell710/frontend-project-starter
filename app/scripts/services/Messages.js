@@ -7,13 +7,17 @@
     Message.all = messages;
 
     Message.add = function(roomId) {
-        messages.$add({ message: "roomID" });
+        messages.$add({ message: "roomId" });
     }
 
     Message.getByRoomId = function(roomId, messages) {
         var newRef = ref.orderByChild("roomId").equalTo(roomId);
         return $firebaseArray(newRef);
     };
+      
+    //Message.send = function(newMessage) {
+        // Send method logic
+    //};
     
     return Message;
   }
