@@ -21,5 +21,5 @@
  
      angular
          .module('blocBaseProject')
-         .controller('LandingCtrl', ['$cookies', 'Room', 'Message', 'User', LandingCtrl]);
+         .controller('LandingCtrl', ['Room', 'Message', 'User', LandingCtrl]);
  })();

@@ -8,7 +8,7 @@
 </form>
 
 <form ng-submit='landing.createUser(name)'>
-    <input type='text' name='name' placeholder='Username' ng-model='name'>
+    <input type='text' name='name' placeholder='Username' ng- model='name'>
     <input type='submit' value='Create User'>
 </form>
 
@@ -18,7 +18,7 @@
     </div>
 </div>
 
-<div class="room"><h1>{{ landing.currentRoom.name }}</h1></div>
+<div class="room"><h3>{{ landing.currentRoom.name }}</h3></div>
 <div class="messages" ng-repeat="message in landing.messages">
     <p>{{ message.content }}</p>
     <p>{{ message.username }}</p>
