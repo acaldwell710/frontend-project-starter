@@ -16,6 +16,6 @@
  
 
 angular
-    .module('blocBaseProject', ['ui.router', 'firebase'])
+    .module('blocBaseProject', ['ui.router', 'firebase', 'ngCookies'])
     .config(config);
  })();

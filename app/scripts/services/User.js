@@ -1,23 +1,22 @@
-//(function() {
-//  function User($firebaseArray) {
- //   var User = {};
- //   var ref = firebase.database().ref().child("users");
- //   var users = $firebaseArray(ref);
-
- //   User.all = users;
+(function() {
+  function User($cookies) {
+    var User = {};
+    // set a username
+    // get a username
     
-  //  User.getUser = function($cookies, users) {
-  //      $cookies.get(users);
- //   } 
-   
- //   };
+    // Retrieve the cookie and set it to userName, in first visit it will be an empty string
+//    $scope.userName = $cookies.userName || "";
 
-  //  return User;
- // }
+    // Set the cookie for next visit of the user
+    User.setName = function(newUsername){
+        console.log(newUsername);
+        $cookies.put('userName', newUsername);
+    };
+   
+    return User;
+  }
  
- 
- 
-//  angular
-//      .module('blocBaseProject', ['ngCookies'])
-//      .factory('User', ['$cookies', '$firebaseArray', User]);
-//})();
+  angular
+      .module('blocBaseProject')
+      .factory('User', ['$cookies', '$firebaseArray', User]);
+})();
