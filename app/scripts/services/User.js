@@ -9,9 +9,14 @@
 
     // Set the cookie for next visit of the user
     User.setName = function(newUsername){
-        console.log(newUsername);
         $cookies.put('userName', newUsername);
     };
+    
+    User.getName = function() {
+       return $cookies.get('userName');
+    };
+      
+    console.log(User.getName());
    
     return User;
   }

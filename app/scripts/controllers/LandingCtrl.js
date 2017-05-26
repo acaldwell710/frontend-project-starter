@@ -6,10 +6,13 @@
          this.createRoom = Room.add;
          this.messages = null;
          this.createUser = User.setName;
+         this.sendMessage = Message.send;
+         this.username = User.getName();
          
          this.selectRoom = function(room) {
              this.currentRoom = room;
              this.messages = Message.getByRoomId(room.$id);
+             
          }
      }
  

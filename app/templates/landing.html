@@ -23,3 +23,10 @@
     <p>{{ message.content }}</p>
     <p>{{ message.username }}</p>
 </div>
+<div class="typespace">
+    <form ng-submit="landing.sendMessage(message, landing.currentRoom.$id, landing.username)">
+        <textarea name='message' placeholder='Write your message ...' ng-model='message'></textarea>
+        <input type='submit' value='Send Message'/>
+    </form>
+
+</div>
