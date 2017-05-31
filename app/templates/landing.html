@@ -1,33 +1,36 @@
-
-        <h1 class="title" id="headline">Bloc Chat</h1>
+<div class="container">
+<header>
+    <h1 class="titling" id="headline">Bloc Chat</h1>
         
-        <form ng-submit='landing.createRoom(name)' class="form">
-            <input type='text' name='name' placeholder='Room Name' ng-    model='name'>
-            <input type='submit' value='Create Room'>
+    <form ng-submit='landing.createRoom(name)' class="form" id="roomcreate">
+        <input type='text' name='name' placeholder='Room Name' ng-model='name'>
+        <input type='submit' value='Create Room'>
+    </form>
+
+    <form ng-submit='landing.createUser(username)' class="form" id="namecreate">
+        <input type='text' name='name' placeholder='Username' ng-model='username'>
+        <input type='submit' value='Create User'>
+    </form>
+</header>
+<div class="sidebar">
+    <div class="main-chat">
+        <div class="chatroom" ng-repeat="room in landing.rooms" ng-click="landing.selectRoom(room)">{{ room.name }}
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="room">
+        <h3 class="titling" id="subtitle">{{ landing.currentRoom.name }}</h3>
+    </div>
+    <div class="messages" id="list" ng-repeat="message in landing.messages">
+        <p id="themessage">{{ message.content }}</p>
+        <p id="theuser">{{ message.username }}</p>
+    </div>
+    <div class="messages" id="typespace">
+        <form ng-submit="landing.sendMessage(message, landing.currentRoom.$id, landing.username)">
+            <textarea name='message' placeholder='Write your message ...' ng-model='message'></textarea>
+            <input type='submit' value='Send Message'/>
         </form>
-
-        <form ng-submit='landing.createUser(username)' class="form">
-            <input type='text' name='name' placeholder='Username' ng-   model='username'>
-            <input type='submit' value='Create User'>
-        </form>
-
-        <div class="main-chat">
-            <h3 class="title">Rooms</h3>
-                <div class="chatroom" ng-repeat="room in landing.rooms" ng- click="landing.selectRoom(room)">
-                    {{ room.name }}
-                </div>
-        </div>
-
-        <div class="room">
-            <h3>{{ landing.currentRoom.name }}</h3>
-        </div>
-        <div class="messages" id="list" ng-repeat="message in landing.messages">
-            <p>{{ message.content }}</p>
-            <p>{{ message.username }}</p>
-        </div>
-        <div class="messages" id="typespace">
-            <form ng-submit="landing.sendMessage(message, landing.currentRoom.$id, landing.username)">
-                <textarea name='message' placeholder='Write your message ...' ng-model='message'></textarea>
-                <input type='submit' value='Send Message'/>
-            </form>
-        </div>
+    </div>
+</div>
+</div>

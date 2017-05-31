@@ -15,8 +15,6 @@
     User.getName = function() {
        return $cookies.get('userName');
     };
-      
-    console.log(User.getName());
    
     return User;
   }

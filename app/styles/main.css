@@ -1,54 +1,49 @@
 body {
     background-color: darkgrey;
-    font-family: Arial, sans-serif;
+    font-family: 'Shadows Into Light', cursive;
 }
-.messages, .room {
-    position: relative;
-    top: 0px;
-    right: 60%;
-    float: right;
-    clear:both;
-    display: table;
-    border: 5px double navy;
-    border-radius: 15px;
-    padding: 0px 5px;
-    margin-bottom: 2px;
+.container {
+    max-width: 980px;
+    margin-right: auto;
+    margin-left: auto;
 }
-.messages {
-    background-color: white;
-    color: navy;
-}
-.room {
-    border: none;
-}
-#typespace {
-    border: none;
-    background-color: darkgrey;
-}
-.main-chat {
-    background-color:darkolivegreen;
-    color: floralwhite;
-    border: 2px solid navy;
-    border-radius: 15px;
-    padding: 5px;
-    position: relative;
-    left: 150px;
-    top: 80px;
-    float: left;
-    clear: both;
-    display: table;
-}
-
-.form, .title {
+#headline, .form {
     display: inline;
-    position: relative;
-    top: 10px;
-    margin-top: 0px;
-}
-.title {
     margin-right: 10px;
-    margin-left: 0px;
+}
+header{
+    margin-bottom: 50px;
+}
+.sidebar {
+    float: left;
+    width: 20%;
+    margin-right: 50px;
+}
+.main{
+    float: left;
+    width: 60%;
 }
 
+.sidebar, .main {
+    background-color:floralwhite;
+    color: navy;
+    border: 5px double olive;
+    border-radius: 10px;
+    padding: 5px;
+}
+#list {
+    background-color: lightgrey;
+    border-radius: 10px;
+    border: 3px solid black;
+    margin: 2px;
+    padding-left: 5px;
+}
+.titling {
+    font-family: Sarina, cursive;
+    color: darkslategray;
+}
+form {
+    font-family: 'Shadows Into Light'
+}
 
 
