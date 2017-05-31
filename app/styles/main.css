@@ -2,7 +2,53 @@ body {
     background-color: darkgrey;
     font-family: Arial, sans-serif;
 }
+.messages, .room {
+    position: relative;
+    top: 0px;
+    right: 60%;
+    float: right;
+    clear:both;
+    display: table;
+    border: 5px double navy;
+    border-radius: 15px;
+    padding: 0px 5px;
+    margin-bottom: 2px;
+}
 .messages {
     background-color: white;
+    color: navy;
 }
+.room {
+    border: none;
+}
+#typespace {
+    border: none;
+    background-color: darkgrey;
+}
+.main-chat {
+    background-color:darkolivegreen;
+    color: floralwhite;
+    border: 2px solid navy;
+    border-radius: 15px;
+    padding: 5px;
+    position: relative;
+    left: 150px;
+    top: 80px;
+    float: left;
+    clear: both;
+    display: table;
+}
+
+.form, .title {
+    display: inline;
+    position: relative;
+    top: 10px;
+    margin-top: 0px;
+}
+.title {
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+
 
